@@ -1,5 +1,6 @@
 :root{
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,10 +13,13 @@ body {
     margin: 0;
     min-height: 100%;
     width: 100%;
+    height: 100%;
 }
 .container {
-    height: 100%;
-    display: flex;    
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex: auto;
 }
 .left {
     background-image: url("https://images.unsplash.com/photo-1504470695779-75300268aa0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
@@ -23,10 +27,18 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
+
+
 .right {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     width: 60%;
     background-color: var(--bg-color);
 }
@@ -39,9 +51,11 @@ body {
 
 fieldset {
     border: 0;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-self: center;
 }
 
 legend {
@@ -50,7 +64,7 @@ legend {
 
 label {
     display: block;
-    margin: 50px 50px;
+    margin: 30px 50px;
     width: 360px;
 }
 
@@ -70,7 +84,7 @@ input:invalid {
 
 input[type="submit"] {
     display: block;
-    width: 30%;
+    width: 20%;
     margin: 1em auto;
     height: 2em;
     font-size: 1.1rem;
@@ -78,4 +92,24 @@ input[type="submit"] {
     color: var(--bg-color);
     border-color: white;
     min-width: 300px;
+}
+
+a:link {
+    color: ghostwhite;
+    background-color: var(--bg-color)
+}
+
+a:visited {
+    color: gray;
+    background-color: var(--bg-color)
+}
+
+a:hover {
+    color: yellow;
+    background-color: var(--bg-color);
+}
+
+a:active {
+    color: white;
+    background-color: var(--bg-color)
 }
